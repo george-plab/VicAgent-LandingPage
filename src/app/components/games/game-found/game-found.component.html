@@ -1,0 +1,17 @@
+  
+  <h1>Buscador Heroes <small *ngIf="bHasResults"><p> Resultado con termino: </p>  {{ termino }}</small></h1>
+ 
+    <div class="row" *ngIf="!bHasResults">
+        <div class="col-md-12">
+                <div class="alert alert-info">
+                    <h3 >  No Existen resultados de heroe con ese término </h3>
+                </div>
+        </div>
+    </div>
+
+
+<div class="card-columns">
+
+  <app-game-card [game]="game" [Index]="game.idx"   *ngFor="let game of gamesTest, let i=index"></app-game-card>
+
+</div>

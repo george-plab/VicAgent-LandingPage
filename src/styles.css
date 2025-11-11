@@ -1,0 +1,75 @@
+
+/* You can add global styles to this file, and also import other style files */
+
+body{ background-color: black;  padding-bottom: 50px; color: white !important; }
+
+.img-logo{ /* height: 150 px; */  width: 120 px; }
+
+.main-container {  margin-top: 20px;  width: 100%; }
+
+hr {  border-color: white; }
+
+h1 {  color: yellowgreen!important; }
+
+h3 { color: yellowgreen!important; }
+
+p {  color: white }
+
+.jumbotron {  background-color: gray; }
+
+.puntero { border-color: white; cursor: pointer; }
+
+.img-circle { border-radius: 100%;  width: 150px; }
+
+.card-title, .card-text {  color: black;}
+
+.badge {  margin-left: 5px; }
+.btn-outline-success {  margin-left: 5px;}
+.img-thumb {  width: 50px;  height: 50px;}
+
+.wrap { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(280px,1fr)); gap: 1.25rem; }
+.card { border: 1px solid #2b2b2b; border-radius: 14px; overflow: hidden; background: #121212; }
+.card img { width: 100%; display: block; }
+.card .content { padding: 1rem; }
+.tag { font-size: .75rem; margin-right: .5rem; opacity: .8; }
+.price { margin-left: .75rem; }
+.cover { width: 100%; max-height: 420px; object-fit: cover; border-radius: 12px; }
+.cta { display: flex; gap: .75rem; margin: 1rem 0; }
+button { padding: .7rem 1rem; border: 0; border-radius: 10px; cursor: pointer; }
+
+
+
+/* Animaciones */
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  
+  .fast {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+
+
+

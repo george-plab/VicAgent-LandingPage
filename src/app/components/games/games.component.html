@@ -1,0 +1,74 @@
+<h1>Videojuegos de <small>VicAgent</small> </h1>
+
+<br>
+<br>
+
+<div class="card-columns"  >
+  <!-- *ngFor="let game of gamesTest, let i=index" (HeroSelected)="verHeroe( $event )" 
+  --> 
+<!-- <app-game-card [game]="game" [Index]="i" *ngFor="let game of gamesTest, let i=index"></app-game-card> -->
+
+</div> 
+
+<h3> In Steam </h3>
+<div class="card-columns"  >
+  <!-- *ngFor="let game of gamesTest, let i=index" (HeroSelected)="verHeroe( $event )" 
+  --> 
+  
+  <div *ngFor="let game of gamesTest, let i=index" >
+    <app-game-card *ngIf="game.estado=='EarlyAccess'" [game]="game" [Index]="i" ></app-game-card>
+  </div>
+
+</div> 
+
+<h3> Released, In production </h3>
+<div class="card-columns"  >
+  <!-- *ngFor="let game of gamesTest, let i=index" (HeroSelected)="verHeroe( $event )" 
+  --> 
+  
+  <div *ngFor="let game of gamesTest, let i=index" >
+    <app-game-card *ngIf="game.estado=='production'" [game]="game" [Index]="i" ></app-game-card>
+  </div>
+
+</div> 
+<br>
+<h3> Jams </h3>
+<div class="card-columns"  >
+  <!-- *ngFor="let game of gamesTest, let i=index" (HeroSelected)="verHeroe( $event )" 
+  --> 
+  
+  <div *ngFor="let game of gamesTest, let i=index" >
+    <app-game-card *ngIf="game.estado=='jam'" [game]="game" [Index]="i" ></app-game-card>
+  </div>
+
+</div> 
+<br>
+<h3> Demos </h3>
+<div class="card-columns"  >
+  <!-- *ngFor="let game of gamesTest, let i=index" (HeroSelected)="verHeroe( $event )" 
+  --> 
+  
+  <div *ngFor="let game of gamesTest, let i=index" >
+    <app-game-card *ngIf="game.estado=='demo'" [game]="game" [Index]="i" ></app-game-card>
+  </div>
+
+</div  > 
+
+
+
+
+
+<!-- 
+<div class="row">
+  <div class="card-columns">
+      *ngFor="let heroe of heroes, let i=index"
+     (HeroSelected)="verHeroe( $event )"  
+  
+     <app-game-card 
+
+  [game]="heroePadre" [Index]="i" *ngFor="let heroePadre of heroes, let i=index"></app-game-card>
+
+
+  </div>
+</div>-->
+

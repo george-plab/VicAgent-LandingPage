@@ -1,0 +1,108 @@
+<!-- <h1 class="animated fadeIn" > {{heroe.nombre | uppercase }} <small>({{ heroe.aparicion | date:'y'}})</small></h1> -->
+<h1 class="animated fadeIn" > {{game.nombre | uppercase }} <small>({{ game.category | uppercase}})</small></h1>
+<br>
+<div class="container animated fadeIn fast">
+
+    <div class="row" >
+        <div class="col-2">
+    
+        </div>
+        <div class="col">
+            <h2 *ngIf="game.estado=='demo'" > Prueba esta demo frenética en Itch.io </h2>
+            <h4 *ngIf="game.estado=='dev'"  > Este juego está en desarrollo, es posible que tenga bugs, disculpa las molestias </h4>
+        </div>
+        
+    </div>
+    <br>
+    <div class="row" >
+
+        <div class="col-md-12">
+ 
+            <img  [src]="game.imgDetail" class="img-fluid">
+            <br>
+        </div>
+
+    </div>
+    <br><br>
+   
+
+
+    <br><br>
+    <h3 class="offset-4">{{ game.nombre }}</h3>
+    <hr>
+    <div class="row" >
+        <div class="col-md-12">      
+            
+            <p>
+                {{ game.description }}
+            </p>    
+        </div> 
+        <div class="col-md-8">
+            Platform:
+        </div>
+        <div class="col-md-2">
+            <div class="">
+                <img  *ngIf=" game.platform == 'PC' "          height="50"
+                  src="assets/img/pc-logo.jpg"        [alt]="game.platform" >
+                <img  *ngIf=" game.platform == 'ANDROID' "
+                   height="50" 
+                  src="assets/img/android-logo.jpg"   [alt]="game.platform" >
+            </div>
+        </div>
+        
+    </div>
+    <br>
+    <div class="row" >
+        <div class="col-md-2">
+            Tags:
+        </div>
+        <div class="col-md-8">
+            {{ game.category }}
+        </div>
+    </div>
+    <br>
+    <div class="row" >
+        <div class="col-md-6">
+            <a *ngIf="game.estado=='EarlyAccess'" target="_blank" [href]="[ game.marketurl ]"   class="btn btn-primary" > Early Acces in Steam 1.99 $</a>
+            <!-- <a *ngIf="game.estado=='dev'"    class="alert alert-success text-dark" role="alert" > Coming soon Early Access in Steam </a> -->
+            <!-- <a *ngIf="game.estado=='dev'"    class="alert alert-success text-dark" role="alert" > Coming soon Early Access in Steam </a> -->
+            <a *ngIf="game.estado=='production'" target="_blank"  [href]="[ game.marketurl ]"  class="btn btn-primary" > go {{ game.platform | lowercase }} Store </a>
+            <a *ngIf="game.estado=='demo'" target="_blank" [href]="[ game.itchiurl ]"   class="btn btn-primary" > go Itch.io and test Beta version </a>           
+            <a *ngIf="game.estado=='jam'" target="_blank" [href]="[ game.itchiurl ]"   class="btn btn-primary" > go Itch.io and dowload the Demo </a>
+        </div>
+        <div class="col-md-6"> 
+             <a  [routerLink]="['/games']" class="btn btn-outline-danger btn-block">Regresar</a>
+        </div>
+    </div>
+    
+
+</div>
+
+
+
+
+<!-- For testing porpuses -->
+<!-- <div class="row animated fadeIn fast" >
+
+    <div class="col-md-4">
+        <img  [src]="heroe.img" class="img-fluid">
+    <br><br>
+    <a [routerLink]="['/heroes']" class="btn btn-outline-danger btn-block">Regresar</a>
+    </div>
+    <div class="col-md-8">
+        <h3>{{ heroe.nombre }}</h3>
+        <hr>
+        <p>
+            {{ heroe.bio }}
+        </p>
+        <div >
+            <img  *ngIf=" heroe.casa == 'DC' "
+            height="150"
+              src="assets/img/dc-logo.jpg"        [alt]="heroe.casa" >
+            <img  *ngIf=" heroe.casa == 'Marvel' "
+               height="150"
+              src="assets/img/marvel-logo.png"   [alt]="heroe.casa" >
+        </div>
+        
+    </div>
+</div> -->

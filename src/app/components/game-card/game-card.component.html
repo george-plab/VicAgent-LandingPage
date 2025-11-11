@@ -1,0 +1,20 @@
+
+<!-- <div class="card-columns"></div> -->
+    
+<div class="card animated fadeIn fast"     >
+        <img [src] ="game.img"  class="card-img-top" [alt]="game.nombre">
+        <div class="card-body">
+          <h5 class="card-title"> {{ game.nombre }} </h5>
+          <p class="card-text" > {{ game.description }}</p>
+          <p class="card-text"><small class="text-muted"> {{ game.aparicion }} </small></p>
+       <button
+       (click)="verGame(Index)"
+       type="button" class="btn btn-outline-primary btn-block">
+        Ver Más
+       </button >
+       <!-- <a [routerLink]="['/heroe',id]" class="btn btn-outline-primary">Ver Más</a>-->
+        </div> 
+     </div>
+
+
+ 
